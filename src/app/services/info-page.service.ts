@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { InfoPage } from '../interfaces/info-page.interface';
-import { InfoEquipo } from '../interfaces/info-equipo.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +34,7 @@ export class InfoPageService {
     this.http.get('https://angular-html-850cb.firebaseio.com/equipo.json')
     .subscribe( (res: any []) => {
        this.equipo = res;
-       console.log(res);
+      // console.log(res);
     });
   }
 }
